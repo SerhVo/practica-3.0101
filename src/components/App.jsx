@@ -1,4 +1,7 @@
+import PostList from './PostList/PostList';
+import database from '../database/database.json';
 export const App = () => {
+  console.log(database);
   return (
     <div
       style={{
@@ -7,10 +10,10 @@ export const App = () => {
         justifyContent: 'center',
         alignItems: 'center',
         fontSize: 40,
-        color: '#010101'
+        color: '#010101',
       }}
     >
-      React homework template
+      <PostList db={database} />
     </div>
   );
 };
